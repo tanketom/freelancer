@@ -7,6 +7,25 @@ const lanceLength = 80;
 const speed = 2;
 const maxHP = 3;
 
+// Knight Names and Epitaphs
+const knightNames = [
+    "Alaric", "Cedric", "Eamon", "Gareth", "Percival", "Roland", "Tristan", "Godfrey",
+    "Leopold", "Lionel", "Reginald", "Thaddeus", "Victor", "Alistair", "Benedict", "Conrad",
+    "Dominic", "Edmund", "Frederick", "Quentin"
+];
+
+const knightEpitaphs = [
+    "the Brave", "the Valiant", "the Just", "the Bold", "the Wise", "the Fearless", "the Noble",
+    "the Stalwart", "the Gallant", "the Steadfast", "the Honorable", "the Resolute", "the Guardian",
+    "the Vigilant", "the Pure", "the Defender", "the Loyal", "the Courageous", "the Mighty", "the Justiciar"
+];
+
+function getRandomKnightName() {
+    const name = knightNames[Math.floor(Math.random() * knightNames.length)];
+    const epitaph = knightEpitaphs[Math.floor(Math.random() * knightEpitaphs.length)];
+    return `Sir ${name} ${epitaph}`;
+}
+
 // Game State Variables
 let playerY = canvasHeight / 2;
 let computerY = canvasHeight / 2;
@@ -31,24 +50,6 @@ const knightNameDisplay = document.getElementById('knightName');
 
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
-
-const knightNames = [
-    "Alaric", "Cedric", "Eamon", "Gareth", "Percival", "Roland", "Tristan", "Godfrey",
-    "Leopold", "Lionel", "Reginald", "Thaddeus", "Victor", "Alistair", "Benedict", "Conrad",
-    "Dominic", "Edmund", "Frederick", "Quentin"
-];
-
-const knightEpitaphs = [
-    "the Brave", "the Valiant", "the Just", "the Bold", "the Wise", "the Fearless", "the Noble",
-    "the Stalwart", "the Gallant", "the Steadfast", "the Honorable", "the Resolute", "the Guardian",
-    "the Vigilant", "the Pure", "the Defender", "the Loyal", "the Courageous", "the Mighty", "the Justiciar"
-];
-
-function getRandomKnightName() {
-    const name = knightNames[Math.floor(Math.random() * knightNames.length)];
-    const epitaph = knightEpitaphs[Math.floor(Math.random() * knightEpitaphs.length)];
-    return `Sir ${name} ${epitaph}`;
-}
 
 knightNameDisplay.textContent = playerName;
 
