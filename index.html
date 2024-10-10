@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FREELANCER</title>
-    <style>
-        canvas {
-            display: block;
-            margin: 0 auto;
-            background: #f0f0f0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <div id="titleScreen">
+        <h1>FREELANCER</h1>
+        <p id="knightName"></p>
+        <button id="startButton">Start Game</button>
+        <ul id="highScoresList"></ul>
+    </div>
+    <canvas id="gameCanvas" width="800" height="400" style="display:none;"></canvas>
     <script src="game.js"></script>
 </body>
 </html>
